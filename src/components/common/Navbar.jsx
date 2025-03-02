@@ -139,8 +139,7 @@ const NavActions = styled.div`
   }
   
   @media (max-width: 768px) {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #eee;
+    display: none;
   }
 `;
 
