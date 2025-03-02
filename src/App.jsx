@@ -11,12 +11,15 @@ import Authors from './pages/Authors';
 import Collaborators from './pages/Collaborators';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/common/ScrollToTop';
+import BookDetailsPage from './pages/BookDetails';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <Router>
+        <ScrollToTop />
         <div className="app-wrapper" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
           <Navbar />
           <main style={{ width: '100%', flex: 1 }}>
@@ -28,6 +31,7 @@ function App() {
                 <Route path="/collaborateurs" element={<Collaborators />} />
                 <Route path="/galerie" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/books/:id" element={<BookDetailsPage />} />
             </Routes>
           </main>
           <Footer />

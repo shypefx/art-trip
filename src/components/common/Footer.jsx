@@ -162,17 +162,11 @@ const Footer = () => {
     <FooterWrapper>
       <FooterMain>
         <FooterColumn>
-          <Logo>LonelyPlanet</Logo>
+          <Logo>ArtTrip</Logo>
           <FooterText>
             Explore the world with our expert travel advice, destination guides, and vacation planning resources. We help you discover the best places to visit and create unforgettable experiences.
           </FooterText>
           <SocialIcons>
-            <SocialIcon href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
-              <FaFacebook />
-            </SocialIcon>
-            <SocialIcon href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
-            </SocialIcon>
             <SocialIcon href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </SocialIcon>
@@ -200,42 +194,23 @@ const Footer = () => {
         <FooterColumn>
           <FooterTitle>Destinations</FooterTitle>
           <FooterLinks>
-            <FooterLink><Link to="/destinations/europe">Europe</Link></FooterLink>
-            <FooterLink><Link to="/destinations/asia">Asia</Link></FooterLink>
-            <FooterLink><Link to="/destinations/north-america">North America</Link></FooterLink>
-            <FooterLink><Link to="/destinations/south-america">South America</Link></FooterLink>
-            <FooterLink><Link to="/destinations/africa">Africa</Link></FooterLink>
-            <FooterLink><Link to="/destinations/oceania">Australia & Pacific</Link></FooterLink>
-            <FooterLink><Link to="/destinations/middle-east">Middle East</Link></FooterLink>
-            <FooterLink><Link to="/destinations/antarctica">Antarctica</Link></FooterLink>
+            <FooterLink><Link to="/destinations/paris">Paris</Link></FooterLink>
+            <FooterLink><Link to="/destinations/bruxelles">Bruxelles</Link></FooterLink>
+            <FooterLink><Link to="/destinations/new-york">New York</Link></FooterLink>
+            <FooterLink><Link to="/destinations/tokyo">Tokyo</Link></FooterLink>
+            <FooterLink><Link to="/destinations/rio">Rio de Janeiro</Link></FooterLink>
           </FooterLinks>
         </FooterColumn>
         
         <FooterColumn>
-          <FooterTitle>Travel Interests</FooterTitle>
+          <FooterTitle>Liens</FooterTitle>
           <FooterLinks>
-            <FooterLink><Link to="/interests/adventure">Adventure Travel</Link></FooterLink>
-            <FooterLink><Link to="/interests/art-culture">Art & Culture</Link></FooterLink>
-            <FooterLink><Link to="/interests/beaches">Beaches</Link></FooterLink>
-            <FooterLink><Link to="/interests/food-drink">Food & Drink</Link></FooterLink>
-            <FooterLink><Link to="/interests/hiking">Hiking</Link></FooterLink>
-            <FooterLink><Link to="/interests/history">History</Link></FooterLink>
-            <FooterLink><Link to="/interests/wildlife">Wildlife</Link></FooterLink>
-            <FooterLink><Link to="/interests/road-trips">Road Trips</Link></FooterLink>
-          </FooterLinks>
-        </FooterColumn>
-        
-        <FooterColumn>
-          <FooterTitle>Quick Links</FooterTitle>
-          <FooterLinks>
-            <FooterLink><Link to="/about">About Us</Link></FooterLink>
-            <FooterLink><Link to="/contact">Contact Us</Link></FooterLink>
-            <FooterLink><Link to="/travel-tips">Travel Tips</Link></FooterLink>
-            <FooterLink><Link to="/booking">Book a Trip</Link></FooterLink>
-            <FooterLink><Link to="/partner">Partner with Us</Link></FooterLink>
-            <FooterLink><Link to="/blog">Travel Blog</Link></FooterLink>
-            <FooterLink><Link to="/faq">FAQ</Link></FooterLink>
-            <FooterLink><Link to="/careers">Careers</Link></FooterLink>
+            <FooterLink><Link to="/presentation">Qui sommes-nous ?</Link></FooterLink>
+            <FooterLink><Link to="/contact">Contact</Link></FooterLink>
+            <FooterLink><Link to="/catalogue">Catalogue</Link></FooterLink>
+            <FooterLink><Link to="/nos_auteurs">Nos Auteur.e.s</Link></FooterLink>
+            <FooterLink><Link to="/collaborateurs">Nos collaborateurs</Link></FooterLink>
+            <FooterLink><Link to="/gallerie">Galerie Itinérante</Link></FooterLink>
           </FooterLinks>
         </FooterColumn>
       </FooterMain>

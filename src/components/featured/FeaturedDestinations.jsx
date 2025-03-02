@@ -3,11 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // images
-import parisImage from '../../images/street_art_paris.jpg.webp';
-import bruxellesImage from '../../images/street_art_bruxelles.png';
-import newYorkImage from '../../images/street_art_new_york.jpg';
-import rioImage from '../../images/street_art_rio.jpeg';
-import tokyoImage from '../../images/street_art_tokyo.jpeg';
+import parisImage from '../../images/paris.jpg.webp';
+import bruxellesImage from '../../images/bruxelles.png';
+import newYorkImage from '../../images/new_york.jpg';
+import rioImage from '../../images/rio.jpeg';
+import tokyoImage from '../../images/tokyo.jpeg';
 
 
 const Section = styled.section`
