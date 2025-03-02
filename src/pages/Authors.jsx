@@ -1,12 +1,23 @@
 // components/AuthorsPage.jsx
 import React from "react";
 import styled from "styled-components";
+import olivier from '../images/authors/olivier.png'
+import julienn from '../images/authors/julien.png'
+import claire from '../images/authors/claire.png'
+import myriam from '../images/authors/myriam.png'
+import clementine from '../images/authors/clémentine.png'
+import gilles from '../images/authors/gilles.png'
+import julien from '../images/authors/julien.png'
+import guigui from  '../images/authors/guigui.png'
+import claude from '../images/authors/claud_dominique.png'
 
 const Section = styled.section`
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #f9f9f9;
+    margin-top: 100px;
+
 `;
 
 const SectionTitle = styled.h2`
@@ -14,6 +25,8 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+    margin-top: 50px;
+
 `;
 
 const SectionDescription = styled.p`
@@ -70,21 +83,21 @@ const Authors = () => {
   const authors = [
     {
       name: "Claire Contamine",
-      image: "/path-to-image-claire.jpg", // Replace with actual image path
+      image: claire, // Replace with actual image path
       role: "Commissaire d’exposition et critique d’art",
       description:
         "Claire Contamine (née en 1994) est commissaire d’exposition et critique d’art à Bruxelles. Diplômée en histoire de l’art contemporain et en droit public, elle a collaboré avec des institutions comme le Palais de Tokyo et la Biennale d'Art Contemporain de Riga. Actuellement curatrice assistante à Kanal Centre-Pompidou, elle mène aussi une pratique indépendante en tant qu’auteure pour des catalogues et revues spécialisées.",
     },
     {
       name: "Myriam Boutoulle",
-      image: "/path-to-image-myriam.jpg", // Replace with actual image path
+      image: myriam, // Replace with actual image path
       role: "Journaliste et rédactrice",
       description:
         "Myriam Boutoulle est journaliste et rédactrice spécialisée en art depuis 1995. Elle collabore régulièrement avec Connaissance des Arts depuis 1999, couvrant l’art moderne et contemporain, la photographie, le design et les métiers d’art. En plus de rédiger des articles, elle anime des conférences et forme des professionnels aux enjeux du secteur et à l’optimisation des contenus web (SEO).",
     },
     {
       name: "Clémentine Davin",
-      image: "/path-to-image-clementine.jpg", // Replace with actual image path
+      image: clementine, // Replace with actual image path
       role: "Historienne de l'art",
       description:
         "Clémentine Davin est historienne de l’art, auteure et chercheuse en art contemporain, installée à Bruxelles. Diplômée du master L’art contemporain & son exposition de la Sorbonne, elle collabore avec des institutions majeures. Contributrice régulière de la revue l’art même, elle se penche sur les notions d’émergence et d’inclusivité dans l’art contemporain.",
@@ -94,17 +107,38 @@ const Authors = () => {
   const guides = [
     {
       name: "Olivier Cirendini",
-      image: "/path-to-image-olivier.jpg",
+      image: olivier,
       role: "Guide pour Art Trip : Paris",
       description:
         "Olivier Cirendini, journaliste et photographe indépendant, a signé de nombreux reportages pour des publications comme Grands Reportages, Géo Voyages, National Geographic France ou Libération.fr. Il partage sa passion pour Paris et l'art du voyage avec un regard affûté.",
     },
     {
       name: "Julien",
-      image: "/path-to-image-julien.jpg",
+      image: julienn,
       role: "Guide pour Art Trip : New York",
       description:
         "Julien, originaire de Lyon, explore New York depuis 2021. Engagé dans le tissu associatif à Brooklyn, il connaît chaque recoin de la ville, offrant des visites guidées captivantes.",
+    },
+        {
+      name: "Olivier Cirendini",
+      image: claude,
+      role: "Guide pour Art Trip : Paris",
+      description:
+        "Olivier Cirendini, journaliste et photographe indépendant, a signé de nombreux reportages pour des publications comme Grands Reportages, Géo Voyages, National Geographic France ou Libération.fr. Il partage sa passion pour Paris et l'art du voyage avec un regard affûté.",
+    },
+    {
+      name: "Julien",
+      image: guigui,
+      role: "Guide pour Art Trip : New York",
+      description:
+        "Julien, originaire de Lyon, explore New York depuis 2021. Engagé dans le tissu associatif à Brooklyn, il connaît chaque recoin de la ville, offrant des visites guidées captivantes.",
+    },
+        {
+      name: "Olivier Cirendini",
+      image: gilles,
+      role: "Guide pour Art Trip : Paris",
+      description:
+        "Olivier Cirendini, journaliste et photographe indépendant, a signé de nombreux reportages pour des publications comme Grands Reportages, Géo Voyages, National Geographic France ou Libération.fr. Il partage sa passion pour Paris et l'art du voyage avec un regard affûté.",
     },
     // Add the remaining guides in the same format...
   ];
