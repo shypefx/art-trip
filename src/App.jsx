@@ -9,11 +9,11 @@ import Presentation from './pages/Presentation';
 import Catalogue from './pages/Catalogue';
 import Authors from './pages/Authors';
 import Collaborators from './pages/Collaborators';
-import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/common/ScrollToTop';
 import BookDetailsPage from './pages/BookDetails';
 import DestinationDetails from './pages/DestinationDetails';
+import GallerieItinerante from './pages/GallerieItinerante';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
                 <Route path="/catalogue" element={<Catalogue />} />
                 <Route path="/nos_auteurs" element={<Authors />} />
                 <Route path="/collaborateurs" element={<Collaborators />} />
-                <Route path="/galerie" element={<Gallery />} />
+                <Route path="/galerie" element={<GallerieItinerante />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/books/:id" element={<BookDetailsPage />} />
                 <Route path="/destinations/:id" element={<DestinationDetails />} />

@@ -31,10 +31,7 @@ const HomePage = () => {
       <AnimatedText />
       <FeaturedDestinations />
       <TravelCategories />
-      <FeaturedArticles />
-      <TravelTips />
       <TestimonialsSection />
-      <Newsletter />
       <InstagramFeed />
     </GlobalStyle>
   );

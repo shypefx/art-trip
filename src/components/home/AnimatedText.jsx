@@ -5,23 +5,11 @@ const AnimatedText = () => {
 
   // Text array for randomization
   const textArray = [
-    "Canada",
-    "Bretagne",
-    "Barcelone",
-    "Marseille",
+    "Paris",
     "New York",
-    "Venise",
-    "Madrid",
-    "Milan",
-    "Sardaigne",
-    "Lyon",
-    "Vienne",
-    "Hong Kong",
-    "Chypre",
-    "Pérou",
-    "New Delhi",
-    "Shanghai",
-    "São Paulo",
+    "Tokyo",
+    "Bruxelles",
+    "Rio de Janeiro",
   ];
 
   // Randomize text for lines
@@ -46,10 +34,12 @@ const AnimatedText = () => {
     wrapper: {
       width: "100%",
       position: "relative",
-      backgroundColor: "#fff",
+      backgroundColor: "#f5f5f5",
       padding: "1rem 0",
       overflow: "hidden",
       transform: "skewY(-5deg)", // Slight inclination
+      marginTop: "100px",      // Added 100px top margin
+      marginBottom: "100px",   // Added 100px bottom margin
     },
     container: {
       display: "grid",
@@ -66,7 +56,11 @@ const AnimatedText = () => {
       marginRight: "2rem", // Space between words
       fontSize: "24px",
       fontWeight: "bold",
-      color: "#00a4CC",
+      background: "linear-gradient(90deg, #125202 0%, #9EB697 100%)",
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      color: "transparent", // This makes the text transparent, showing the gradient background
+      WebkitTextFillColor: "transparent", // For Safari support
     },
   };
 

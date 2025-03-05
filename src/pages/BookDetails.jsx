@@ -7,17 +7,18 @@ const DetailsWrapper = styled.section`
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  margin-top: 10rem;
   margin-bottom: 10rem;
   background-color: #f9f9f9;
   border-radius: 25px;
 `;
 
 const BookImage = styled.img`
-  width: 100%;
+  width: 70%;
   max-height: 400px;
   object-fit: cover;
   margin-bottom: 1.5rem;
+  border-radius: 20px;
+  border: 10px solid #125202;
 `;
 
 const BookTitle = styled.h1`

@@ -1,9 +1,8 @@
-import parisImage from "../images/books/paris.png";
-import bruxellesImage from "../images/books/bruxelles.png";
-import tokyoImage from "../images/books/tokyo.jpeg";
-import rioImage from "../images/books/rio.jpeg";
-import newYorkImage from "../images/books/new_york.jpg";
-
+import parisImage from "../images/books/3.png";
+import bruxellesImage from "../images/books/1.png";
+import tokyoImage from "../images/books/4.png";
+import rioImage from "../images/books/5.png";
+import newYorkImage from "../images/books/2.png";
 const books = [
   {
     id: "paris",
