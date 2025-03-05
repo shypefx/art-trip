@@ -179,15 +179,15 @@ const Footer = () => {
           </SocialIcons>
           <ContactItem>
             <FaMapMarkerAlt />
-            <span>123 Travel Street, Adventure City, 10001</span>
+            <span>11 Av. Pozzo Di Borgo, 92210 Saint-Cloud</span>
           </ContactItem>
           <ContactItem>
             <FaEnvelope />
-            <span>info@travelwebsite.com</span>
+            <span>art-trip@travel.com</span>
           </ContactItem>
           <ContactItem>
             <FaPhone />
-            <span>+1 (123) 456-7890</span>
+            <span>+33 1 77 65 67 89</span>
           </ContactItem>
         </FooterColumn>
         
@@ -218,7 +218,7 @@ const Footer = () => {
       <FooterBottom>
         <FooterBottomInner>
           <Copyright>
-            &copy; {new Date().getFullYear()} LonelyPlanet. All rights reserved.
+            &copy; {new Date().getFullYear()} ArtTrip. All rights reserved.
           </Copyright>
           
           <FooterBottomLinks>

@@ -16,8 +16,6 @@ const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   background-color: #f9f9f9;
-    margin-top: 100px;
-
 `;
 
 const SectionTitle = styled.h2`

@@ -41,6 +41,11 @@ const GlobalStyles = createGlobalStyle`
     color: var(--text);
     width: 100%;
     overflow-x: hidden;
+    margin-top: 50px;
+  }
+
+  html {
+        background-color: #ECEDE8;
   }
 
   body, #root {

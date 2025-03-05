@@ -13,6 +13,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/common/ScrollToTop';
 import BookDetailsPage from './pages/BookDetails';
+import DestinationDetails from './pages/DestinationDetails';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/galerie" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/books/:id" element={<BookDetailsPage />} />
+                <Route path="/destinations/:id" element={<DestinationDetails />} />
             </Routes>
           </main>
           <Footer />

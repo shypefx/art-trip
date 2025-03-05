@@ -18,7 +18,6 @@ const HeroSection = styled.section`
   justify-content: center;
   color: white;
   padding: 0 2rem;
-  margin-top: 150px;
   @media (max-width: 768px) {
     height: 70vh;
     min-height: 500px;

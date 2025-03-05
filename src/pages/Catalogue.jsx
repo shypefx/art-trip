@@ -7,7 +7,6 @@ const CatalogueWrapper = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  margin-top: 10rem;
   margin-bottom: 10rem;
 `;
 
