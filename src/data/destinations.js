@@ -28,27 +28,27 @@ const destinations = [
     id: "paris",
     title: "Paris",
     image: parisImage,
-    overview: `Paris, the City of Light, is renowned for its vibrant culture, historical landmarks, and iconic architecture. 
-      Perfect for romantic moments or cultural exploration.`,
+    overview: `Paris, la Ville Lumière, est renommée pour sa culture vibrante, ses monuments historiques et son architecture emblématique. 
+      Parfait pour des moments romantiques ou une exploration culturelle.`,
     famousPlaces: [
       {
-        name: "Eiffel Tower",
-        description: `The Eiffel Tower is one of the most recognizable monuments in the world, offering stunning views of Paris.`,
+        name: "Tour Eiffel",
+        description: `La Tour Eiffel est l'un des monuments les plus reconnaissables au monde, offrant des vues imprenables sur Paris.`,
         image: eiffelTowerImage,
       },
       {
-        name: "Louvre Museum",
-        description: `Home to the famous Mona Lisa painting, the Louvre is a hub of art, history, and architecture.`,
+        name: "Musée du Louvre",
+        description: `Abritant le célèbre tableau de la Joconde, le Louvre est un centre d'art, d'histoire et d'architecture.`,
         image: louvreImage,
       },
       {
         name: "Avenue des Champs-Élysées",
-        description: `A legendary avenue lined with shops, cafes, and theaters, culminating at the Arc de Triomphe.`,
+        description: `Une avenue légendaire bordée de boutiques, de cafés et de théâtres, culminant à l'Arc de Triomphe.`,
         image: champsElyseesImage,
       },
       {
         name: "Cathédrale Notre-Dame de Paris",
-        description: `An iconic Gothic cathedral, home to stunning stained glass windows and incredible history.`,
+        description: `Une cathédrale gothique emblématique, abritant de magnifiques vitraux et une histoire incroyable.`,
         image: notreDameImage,
       },
     ],
@@ -57,16 +57,16 @@ const destinations = [
     id: "bruxelles",
     title: "Bruxelles",
     image: bruxellesImage,
-    overview: `Brussels is a cultural and political center known for its medieval architecture, chocolate, waffles, and comic book art.`,
+    overview: `Bruxelles est un centre culturel et politique connu pour son architecture médiévale, son chocolat, ses gaufres et son art de la bande dessinée.`,
     famousPlaces: [
       {
         name: "Grand-Place",
-        description: `The Grand-Place is an opulent square surrounded by guildhalls and the beautiful Town Hall.`,
+        description: `La Grand-Place est une place opulente entourée de maisons de corporations et de la magnifique Hôtel de Ville.`,
         image: grandPlaceImage,
       },
       {
         name: "Atomium",
-        description: `This iconic structure symbolizes modern Brussels and offers panoramic views of the city.`,
+        description: `Cette structure emblématique symbolise le Bruxelles moderne et offre des vues panoramiques sur la ville.`,
         image: atomiumImage,
       },
     ],
@@ -75,16 +75,16 @@ const destinations = [
     id: "tokyo",
     title: "Tokyo",
     image: tokyoImage,
-    overview: `Tokyo is a dazzling metropolis blending tradition and modernity with temples, skyscrapers, and vibrant neighborhoods.`,
+    overview: `Tokyo est une métropole éblouissante mêlant tradition et modernité avec des temples, des gratte-ciels et des quartiers vibrants.`,
     famousPlaces: [
       {
         name: "Shibuya Crossing",
-        description: `Shibuya Crossing is the busiest pedestrian crossing in the world and a symbol of Tokyo's urban energy.`,
+        description: `Shibuya Crossing est le passage piéton le plus fréquenté au monde et un symbole de l'énergie urbaine de Tokyo.`,
         image: shibuyaImage,
       },
       {
-        name: "Senso-ji Temple",
-        description: `Tokyo's oldest Buddhist temple, Senso-ji is a serene spot amidst the city's fast-paced life.`,
+        name: "Temple Senso-ji",
+        description: `Le plus ancien temple bouddhiste de Tokyo, Senso-ji est un lieu serein au milieu de la vie trépidante de la ville.`,
         image: sensoJiImage,
       },
     ],
@@ -93,16 +93,16 @@ const destinations = [
     id: "rio",
     title: "Rio de Janeiro",
     image: rioImage,
-    overview: `Rio de Janeiro is famed for its vibrant culture, Christ the Redeemer statue, picturesque beaches, and infectious samba music.`,
+    overview: `Rio de Janeiro est célèbre pour sa culture vibrante, la statue du Christ Rédempteur, ses plages pittoresques et sa musique samba entraînante.`,
     famousPlaces: [
       {
-        name: "Christ the Redeemer",
-        description: `The Christ the Redeemer statue stands majestically atop Mount Corcovado, overlooking Rio.`,
+        name: "Christ Rédempteur",
+        description: `La statue du Christ Rédempteur se dresse majestueusement au sommet du mont Corcovado, surplombant Rio.`,
         image: christRedeemerImage,
       },
       {
-        name: "Sugarloaf Mountain",
-        description: `Sugarloaf Mountain offers panoramic views of the city, making it one of Rio's most spectacular locations.`,
+        name: "Pain de Sucre",
+        description: `Le Pain de Sucre offre des vues panoramiques sur la ville, en faisant l'un des lieux les plus spectaculaires de Rio.`,
         image: sugarloafMountainImage,
       },
     ],
@@ -111,16 +111,16 @@ const destinations = [
     id: "new-york",
     title: "New York",
     image: newYorkImage,
-    overview: `New York City, the city that never sleeps, is iconic for its skyscrapers, Broadway shows, and energetic atmosphere.`,
+    overview: `New York, la ville qui ne dort jamais, est emblématique pour ses gratte-ciels, ses spectacles de Broadway et son atmosphère énergique.`,
     famousPlaces: [
       {
-        name: "Statue of Liberty",
-        description: `The Statue of Liberty offers a symbol of freedom and outstanding views of New York Harbor.`,
+        name: "Statue de la Liberté",
+        description: `La Statue de la Liberté est un symbole de liberté offrant des vues exceptionnelles sur le port de New York.`,
         image: statueOfLibertyImage,
       },
       {
         name: "Times Square",
-        description: `Known for its neon lights and bustling atmosphere, Times Square is the heart of Manhattan.`,
+        description: `Connu pour ses néons et son atmosphère animée, Times Square est le cœur de Manhattan.`,
         image: timesSquareImage,
       },
     ],
