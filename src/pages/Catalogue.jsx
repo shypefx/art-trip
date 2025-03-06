@@ -19,6 +19,7 @@ const BookCard = styled.div`
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
 `;
 
 const BookImage = styled.img`
@@ -63,7 +64,7 @@ const Catalogue = () => {
           <BookContent>
             <BookTitle>{book.title}</BookTitle>
             <BookDescription>
-              {book.description.slice(0, 150)}...
+              {book.description.slice(0, 200)}...
             </BookDescription>
             <DetailsLink to={`/books/${book.id}`}>Voir les détails</DetailsLink>
           </BookContent>

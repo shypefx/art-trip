@@ -14,17 +14,20 @@ import ScrollToTop from './components/common/ScrollToTop';
 import BookDetailsPage from './pages/BookDetails';
 import DestinationDetails from './pages/DestinationDetails';
 import GallerieItinerante from './pages/GallerieItinerante';
+import { CartProvider } from './context/CartContext.jsx';
+import Cart from './pages/Cart';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Router>
-        <ScrollToTop />
-        <div className="app-wrapper" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
-          <Navbar />
-          <main style={{ width: '100%', flex: 1 }}>
-            <Routes>
+      <CartProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="app-wrapper" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Navbar />
+            <main style={{ width: '100%', flex: 1 }}>
+              <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/presentation" element={<Presentation />} />
                 <Route path="/catalogue" element={<Catalogue />} />
@@ -34,11 +37,14 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/books/:id" element={<BookDetailsPage />} />
                 <Route path="/destinations/:id" element={<DestinationDetails />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+                <Route path='/cart' element={<Cart/>} />
+                <Route path="*" element={<h1>404 - Not Found</h1>} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </CartProvider>
     </>
   );
 }

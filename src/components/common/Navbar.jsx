@@ -1,7 +1,10 @@
 // components/home/Navigation.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import cart from "../../images/shopping-cart.png"
+import { CartContext } from '../../context/CartContext';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -122,43 +125,49 @@ const NavActions = styled.div`
   display: flex;
   align-items: center;
   
-  button {
-    background:  #9EB697;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
+  img {
+    width: 30px;
+    height: 30px;
     margin-left: 1rem;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.2s;
-    
-    &:hover {
-      background: #085888;
-    }
+    color: #125202;
+
   }
+`;
+
+const CartIcon = styled(Link)`
+  position: relative;
+  color: #125202;
+  font-size: 1.5rem;
+  transition: all 0.3s;
   
-  @media (max-width: 768px) {
-    display: none;
+  &:hover {
+    color: #1a7a03;
+    transform: scale(1.1);
   }
+`;
+
+const CartBadge = styled.span`
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
 `;
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getTotalItems } = useContext(CartContext); // Récupération de getTotalItems du contexte
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  // Handlers for Connexion and Inscription buttons
-  const handleConnexion = () => {
-    console.log('Connexion button clicked');
-    // Add your logic here (e.g., opening a login modal or redirecting)
-  };
-
-  const handleInscription = () => {
-    console.log('Inscription button clicked');
-    // Add your logic here (e.g., opening a signup modal or redirecting)
   };
   
   return (
@@ -196,8 +205,10 @@ const Navbar = () => {
         </NavLinks>
         
         <NavActions>
-          <button onClick={handleConnexion}>Connexion</button>
-          <button onClick={handleInscription}>Inscription</button>
+          <CartIcon to="/cart">
+            <FaShoppingCart />
+              {getTotalItems() > 0 && <CartBadge>{getTotalItems()}</CartBadge>}
+            </CartIcon>
         </NavActions>
       </NavInner>
     </NavContainer> 
