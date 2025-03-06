@@ -164,7 +164,7 @@ const Footer = () => {
         <FooterColumn>
           <Logo>ArtTrip</Logo>
           <FooterText>
-            Explore the world with our expert travel advice, destination guides, and vacation planning resources. We help you discover the best places to visit and create unforgettable experiences.
+            ArtTrip est une agence de voyage spécialisée dans les voyages culturels et artistiques. Nous proposons des voyages sur mesure pour les passionnés d'art et de culture.
           </FooterText>
           <SocialIcons>
             <SocialIcon href="https://instagram.com/" target="_blank" rel="noopener noreferrer">

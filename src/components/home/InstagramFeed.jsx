@@ -106,7 +106,7 @@ const PhotoOverlay = styled.div`
 const InstagramFeed = () => {
   // This would typically come from an Instagram API
   const photos = [
-    { id: 1, url: '/images/instagram1.jpg', link: 'https://instagram.com/' },
+    { id: 1, url: '../../images/book/paris.png', link: 'https://instagram.com/' },
     { id: 2, url: '/images/instagram2.jpg', link: 'https://instagram.com/' },
     { id: 3, url: '/images/instagram3.jpg', link: 'https://instagram.com/' },
     { id: 4, url: '/images/instagram4.jpg', link: 'https://instagram.com/' },
@@ -119,13 +119,13 @@ const InstagramFeed = () => {
       <SectionHeader>
         <SectionTitle>
           <FaInstagram />
-          Follow Our Adventures
+          Suivez nos aventures
         </SectionTitle>
         <SectionDescription>
-          Get daily travel inspiration by following us on Instagram
+            Découvrez les plus belles photos de nos voyageurs sur Instagram
         </SectionDescription>
         <InstagramLink href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-          @travelwebsite
+          @arttrip
         </InstagramLink>
       </SectionHeader>
       

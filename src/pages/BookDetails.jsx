@@ -53,6 +53,11 @@ const BookWrapper = styled.div`
   width: ${props => props.isOpen ? '60%' : '500px'};
   height: 400px;
   transition: all 1.5s ease;
+
+   @media (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+  }
 `;
 
 const BookContainer = styled.div`
@@ -62,6 +67,7 @@ const BookContainer = styled.div`
   transform-style: preserve-3d;
   transform: ${props => props.isOpen ? 'rotateY(-180deg)' : 'rotateY(0)'};
   transition: transform 1.5s ease;
+  
 `;
 
 const BookCover = styled.div`

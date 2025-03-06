@@ -5,7 +5,7 @@ import tokyoImageBack from "../images/books/9.png";
 import newYorkImage from "../images/books/2.png";
 import newYorkImageBack from "../images/books/6.png";
 import bruxellesImage from "../images/books/1.png";
-import bruxellesImageBack from "../images/books/4.png";
+import bruxellesImageBack from "../images/books/6.png";
 import rioImage from "../images/books/5.png";
 import rioImageBack from "../images/books/10.png";
 import { image } from "framer-motion/client";

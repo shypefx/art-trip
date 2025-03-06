@@ -136,6 +136,13 @@ const TestimonialsSection = () => {
       name: "Emma Wilson",
       location: "London, UK",
       stars: 4
+    },
+    {
+      id: 4,
+      text: "Ce site est incroyable! Les guides de voyage sont très utiles et m'ont aidé à planifier mon voyage en France. Merci beaucoup!",
+      name: "Paul Leclerc",
+      location: "Paris, FR",
+      stars: 4
     }
   ];
   
@@ -151,9 +158,9 @@ const TestimonialsSection = () => {
     <Section>
       <SectionInner>
         <SectionHeader>
-          <SectionTitle>Traveler Stories</SectionTitle>
+          <SectionTitle>Avis des voyageurs</SectionTitle>
           <SectionDescription>
-            See what our community has to say about their experiences
+            Visualisez les témoignages de nos clients satisfaits.
           </SectionDescription>
         </SectionHeader>
         

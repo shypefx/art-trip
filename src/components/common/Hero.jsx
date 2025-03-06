@@ -47,7 +47,7 @@ const HeroTitle = styled.h1`
   }
 `;
 
-const HeroSubtitle = styled.p`
+const HeroSubtitle = styled.h2`
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
   max-width: 600px;
@@ -69,15 +69,15 @@ const SearchContainer = styled.div`
 
 const ExploreButton = styled(Link)`
   display: inline-block;
-  background-color: #0a6caa;
+  background-color: grey;
   color: white;
   text-decoration: none;
   padding: 1rem 2rem;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 20px;
+  font-weight: 400;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  margin-top: 1rem;
+  margin-top: 5rem;
   
   &:hover {
     background-color: #085990;
@@ -164,14 +164,11 @@ const Hero = () => {
   return (
     <HeroSection>
       <HeroContent>
-        <HeroTitle>Discover Your Next Adventure</HeroTitle>
+        <HeroTitle>Découvrez votre prochaine aventure</HeroTitle>
         <HeroSubtitle>
-          Explore incredible destinations around the world with our expert travel guides and tips
+          Explorez des destinations incroyables à travers le monde avec nos guides de voyage et conseils d'experts
         </HeroSubtitle>
-        <SearchContainer>
-          <SearchBar />
-        </SearchContainer>
-        <ExploreButton to="/destinations">Explore Destinations</ExploreButton>
+        <ExploreButton to="/destinations">Nos Destinations</ExploreButton>
       </HeroContent>
       
       <ScrollPrompt onClick={scrollToContent}>

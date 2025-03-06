@@ -59,7 +59,7 @@ const GlobalStyles = createGlobalStyle`
   /* Headings: Use Gliker for Titles */
   h1 {
     font-family: 'Gliker', sans-serif;
-    color: #9EB697;
+    color: #125202;
   }
 
   /* Subtitles: Use Montserrat */
