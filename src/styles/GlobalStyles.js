@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-        background-color: #ECEDE8;
+    background-color: #ECEDE8;
   }
 
   body, #root {

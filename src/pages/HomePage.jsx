@@ -30,7 +30,6 @@ const HomePage = () => {
       <Hero />
       <AnimatedText />
       <FeaturedDestinations />
-      <TravelCategories />
       <TestimonialsSection />
       <InstagramFeed />
     </GlobalStyle>

@@ -168,7 +168,6 @@ const Hero = () => {
         <HeroSubtitle>
           Explorez des destinations incroyables à travers le monde avec nos guides de voyage et conseils d'experts
         </HeroSubtitle>
-        <ExploreButton to="/destinations">Nos Destinations</ExploreButton>
       </HeroContent>
       
       <ScrollPrompt onClick={scrollToContent}>
