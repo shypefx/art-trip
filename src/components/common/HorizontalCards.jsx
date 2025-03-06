@@ -82,7 +82,7 @@ const CardLink = styled(Link)`
   }
 `;
 
-const HorizontalCards = ({ title, subtitle, data }) => {
+const HorizontalCards = ({ title, subtitle, data, destinationCity }) => {
   return (
     <Section>
       <SectionTitle>{title}</SectionTitle>
@@ -96,7 +96,7 @@ const HorizontalCards = ({ title, subtitle, data }) => {
             <CardContent>
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
-              <CardLink to={`/destinations/${item.id}`}>→ Voir plus</CardLink>
+              <CardLink to={`/books/${destinationCity}`}>→ Voir plus</CardLink>
             </CardContent>
           </Card>
         ))}

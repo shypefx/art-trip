@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import styled from "styled-components";
 import books from "../data/book";
 import { CartContext } from "../context/CartContext";
-import { FaArrowLeft, FaShoppingCart, FaPlus } from "react-icons/fa";
+import { FaArrowLeft, FaShoppingCart, FaPlus, FaArrowRight, FaArrowLeft as FaArrowLeftIcon, FaTimes } from "react-icons/fa";
 
 const DetailsWrapper = styled.section`
   max-width: 1000px;
@@ -37,71 +37,6 @@ const BackButton = styled(Link)`
   }
 `;
 
-const BookVisualContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-  perspective: 2000px;
-  height: 400px;
-`;
-
-const BookWrapper = styled.div`
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s ease;
-  width: ${props => props.isOpen ? '60%' : '500px'};
-  height: 400px;
-  transition: all 1.5s ease;
-
-   @media (max-width: 768px) {
-      width: 100%;
-      height: 300px;
-  }
-`;
-
-const BookContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: ${props => props.isOpen ? 'rotateY(-180deg)' : 'rotateY(0)'};
-  transition: transform 1.5s ease;
-  
-`;
-
-const BookCover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  background: #125202;
-  transform-style: preserve-3d;
-`;
-
-const BookBack = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  background: #125202;
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-`;
-
-const BookImage = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-`;
-
 const BookTitle = styled.h1`
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
@@ -111,11 +46,153 @@ const BookTitle = styled.h1`
   padding-bottom: 1rem;
 `;
 
+// Carousel components
+const CarouselContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+`;
+
+// Mise à jour des styles du carrousel
+const CarouselSlide = styled.div`
+  display: flex;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5; // Fond neutre pour les images plus petites
+  
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+`;
+
+const CarouselImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain; // Changed from 'cover' to 'contain'
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 10px; // Add some padding
+  background-color: white; // White background for smaller images
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+
+
+
+const CarouselButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 82, 2, 0.7);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(18, 82, 2, 0.9);
+  }
+  
+  &.prev {
+    left: 10px;
+  }
+  
+  &.next {
+    right: 10px;
+  }
+`;
+
+const CarouselIndicators = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+const CarouselDot = styled.div`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: ${props => props.active ? '#125202' : '#ddd'};
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: ${props => props.active ? '#125202' : '#aaa'};
+  }
+`;
+
+// Modal for enlarged image
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`;
+
+
+// Mise à jour du style du modal pour les images plus petites
+const ModalContent = styled.div`
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #f5f5f5; // Fond neutre pour mieux voir les images
+  padding: 20px;
+  border-radius: 10px;
+`;
+
+const ModalImage = styled.img`
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain; // Ensures the image keeps its proportions
+  display: block;
+  margin: 0 auto; // Center the image
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  &:hover {
+    color: #ffde59;
+    transform: scale(1.1);
+  }
+`;
+
 const BookInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const BookContent = styled.div``;
@@ -140,16 +217,9 @@ const InfoText = styled.p`
   font-weight: bold;
 `;
 
-const ButtonsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-`;
-
-const ToggleButton = styled.button`
-  background-color: #125202;
-  color: white;
+const AddToCartButton = styled.button`
+  background-color: #ffde59;
+  color: #125202;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
@@ -161,9 +231,11 @@ const ToggleButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
   
   &:hover {
-    background-color: #1a7a03;
+    background-color: #ffd200;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(18, 82, 2, 0.4);
   }
@@ -178,15 +250,6 @@ const ToggleButton = styled.button`
   }
 `;
 
-const AddToCartButton = styled(ToggleButton)`
-  background-color: #ffde59;
-  color: #125202;
-  
-  &:hover {
-    background-color: #ffd200;
-  }
-`;
-
 const BookDescription = styled.div`
   padding: 1.5rem;
   background-color: #fff;
@@ -194,25 +257,9 @@ const BookDescription = styled.div`
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   grid-column: span 2;
   border-left: 3px solid #125202;
-`;
-
-const BookEdge = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 12px;
-  right: ${props => props.isRight ? '-12px' : 'auto'};
-  left: ${props => props.isRight ? 'auto' : '-12px'};
-  top: 0;
-  background-color: #125202;
   
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    ${props => props.isRight ? 'left: 2px;' : 'right: 2px;'}
-    width: 4px;
-    height: 100%;
-    background-color: #9932cc;
+  @media (max-width: 768px) {
+    grid-column: span 1;
   }
 `;
 
@@ -240,7 +287,8 @@ const BookDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const book = books.find((book) => book.id === id);
-  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const { addToCart } = useContext(CartContext);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -248,12 +296,12 @@ const BookDetails = () => {
     return <p>Book not found</p>;
   }
   
-  const frontImage = book.image;
-  const backImage = book.imageback;
-
-  const toggleBook = () => {
-    setIsOpen(!isOpen);
-  };
+  // Get all available images
+  const bookImages = [
+    book.image,
+    book.imageleft,
+    book.imageright, // Fallback to the main image if imageExtra1 doesn't exist
+  ];
   
   const handleAddToCart = () => {
     addToCart(book);
@@ -261,6 +309,30 @@ const BookDetails = () => {
     setTimeout(() => {
       setShowMessage(false);
     }, 3000);
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === bookImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? bookImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -271,30 +343,48 @@ const BookDetails = () => {
       
       <BookTitle>{book.title}</BookTitle>
       
-      <BookVisualContainer>
-        <BookWrapper isOpen={isOpen}>
-          <BookContainer isOpen={isOpen}>
-            <BookCover>
-              <BookImage src={frontImage} alt={`Couverture de ${book.title}`} />
-              <BookEdge isRight={true} />
-            </BookCover>
-            <BookBack>
-              <BookImage src={backImage} alt={`Dos de ${book.title}`} />
-              <BookEdge isRight={false} />
-            </BookBack>
-          </BookContainer>
-        </BookWrapper>
-      </BookVisualContainer>
-
-      <ButtonsContainer>
-        <ToggleButton onClick={toggleBook}>
-          {isOpen ? "Fermer le livre" : "Ouvrir le livre"}
-        </ToggleButton>
-        
-        <AddToCartButton onClick={handleAddToCart}>
-          <FaPlus /> Ajouter au panier
-        </AddToCartButton>
-      </ButtonsContainer>
+      <CarouselContainer>
+        <CarouselSlide>
+          <CarouselImage 
+            src={bookImages[currentIndex]} 
+            alt={`Image ${currentIndex + 1} de ${book.title}`} 
+            onClick={openModal}
+          />
+        </CarouselSlide>
+        <CarouselButton className="prev" onClick={prevSlide}>
+          <FaArrowLeftIcon />
+        </CarouselButton>
+        <CarouselButton className="next" onClick={nextSlide}>
+          <FaArrowRight />
+        </CarouselButton>
+        <CarouselIndicators>
+          {bookImages.map((_, index) => (
+            <CarouselDot 
+              key={index} 
+              active={currentIndex === index}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </CarouselIndicators>
+      </CarouselContainer>
+      
+      {modalOpen && (
+        <Modal onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={closeModal}>
+              <FaTimes />
+            </CloseButton>
+            <ModalImage 
+              src={bookImages[currentIndex]} 
+              alt={`Image ${currentIndex + 1} de ${book.title}`}
+            />
+          </ModalContent>
+        </Modal>
+      )}
+      
+      <AddToCartButton onClick={handleAddToCart}>
+        <FaPlus /> Ajouter au panier
+      </AddToCartButton>
       
       <BookContent>
         <BookDescription>

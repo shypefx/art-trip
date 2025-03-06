@@ -61,6 +61,7 @@ const DestinationDetails = () => {
         title="Les incontournables"
         subtitle={`Les sites emblématiques de ${destination.title}`}
         data={famousPlacesData}
+        destinationCity={destination.id}
       />
     </DetailsWrapper>
   );

@@ -62,7 +62,7 @@ const Destinations = () => {
           <DestinationContent>
             <DestinationTitle>{destination.title}</DestinationTitle>
             <DestinationOverview>{destination.overview}</DestinationOverview>
-            <DetailsLink to={`/destinations/${destination.id}`}>
+            <DetailsLink to={`/books/${destinationCity}`}>
               See More
             </DetailsLink>
           </DestinationContent>
