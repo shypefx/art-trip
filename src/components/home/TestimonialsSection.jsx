@@ -118,30 +118,30 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: "The travel guides on this site were incredibly helpful for planning my Europe trip. I discovered so many hidden gems that I wouldn't have found otherwise!",
+      text: "Les guides de voyage sur ce site ont été incroyablement utiles pour planifier mon voyage en Europe. J'ai découvert tellement de joyaux cachés que je n'aurais pas trouvés autrement!",
       name: "Sarah Johnson",
-      location: "New York, USA",
+      location: "New York, États-Unis",
       stars: 5
     },
     {
       id: 2,
-      text: "I've been using this site for years to plan my adventures. The destination tips are always spot-on and have helped me create unforgettable travel memories.",
+      text: "J'utilise ce site depuis des années pour planifier mes aventures. Les conseils sur les destinations sont toujours parfaits et m'ont aidé à créer des souvenirs de voyage inoubliables.",
       name: "David Chen",
       location: "Vancouver, Canada",
       stars: 5
     },
     {
       id: 3,
-      text: "The detailed city guides saved me so much time and made my trip to Japan absolutely seamless. I'll definitely be using this resource for all my future travels.",
+      text: "Les guides détaillés des villes m'ont fait gagner tellement de temps et ont rendu mon voyage au Japon absolument sans accroc. J'utiliserai certainement cette ressource pour tous mes futurs voyages.",
       name: "Emma Wilson",
-      location: "London, UK",
+      location: "Londres, Royaume-Uni",
       stars: 4
     },
     {
       id: 4,
       text: "Ce site est incroyable! Les guides de voyage sont très utiles et m'ont aidé à planifier mon voyage en France. Merci beaucoup!",
       name: "Paul Leclerc",
-      location: "Paris, FR",
+      location: "Paris, France",
       stars: 4
     }
   ];
